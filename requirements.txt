@@ -1,0 +1,5 @@
+jev-ultrafast @ git+https://github.com/browser-use/jev-ultrafast@cf3c406f0fc4becff8986ed4d4d37b7b9f102e45
+httpx[http2]>=0.28,<1
+lxml>=5
+pyarrow>=15
+pytest>=8

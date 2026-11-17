@@ -1,0 +1,25 @@
+file                                   set                           n   step   elem     op  err
+decido-1-web-trained.jsonl             test_task                   500   79.4   82.0   93.6    3
+decido-1-web-trained.jsonl             test_website                500   79.6   81.4   94.0    2
+decido-1-web-trained.jsonl             test_domain                 500   76.8   78.6   94.8    1
+decido-1-web-trained.jsonl             unseen (website+domain)    1000   78.2   80.0   94.4    3
+decido-1-web-trained.jsonl             ALL                        1500   78.6   80.7   94.1    6
+decido-1-web-trained.jsonl             ALL excl. unnamed gold     1444   79.1   81.2   94.0    6
+jev-1.14.jsonl                         test_task                   500   62.4   65.2   87.6    3
+jev-1.14.jsonl                         test_website                500   59.0   61.6   86.2    2
+jev-1.14.jsonl                         test_domain                 500   58.2   60.2   86.6    2
+jev-1.14.jsonl                         unseen (website+domain)    1000   58.6   60.9   86.4    4
+jev-1.14.jsonl                         ALL                        1500   59.9   62.3   86.8    7
+jev-1.14.jsonl                         ALL excl. unnamed gold     1444   61.5   64.1   86.7    7
+jev-1.13.jsonl                         test_task                   500   55.8   59.8   81.4    3
+jev-1.13.jsonl                         test_website                500   52.0   54.2   79.2    2
+jev-1.13.jsonl                         test_domain                 500   55.4   56.8   79.4    2
+jev-1.13.jsonl                         unseen (website+domain)    1000   53.7   55.5   79.3    4
+jev-1.13.jsonl                         ALL                        1500   54.4   56.9   80.0    7
+jev-1.13.jsonl                         ALL excl. unnamed gold     1444   55.9   58.5   80.0    7
+decido-1.jsonl                         test_task                   500   42.0   45.4   63.6    3
+decido-1.jsonl                         test_website                500   39.8   41.2   64.6    2
+decido-1.jsonl                         test_domain                 500   45.8   47.8   67.4    1
+decido-1.jsonl                         unseen (website+domain)    1000   42.8   44.5   66.0    3
+decido-1.jsonl                         ALL                        1500   42.5   44.8   65.2    6
+decido-1.jsonl                         ALL excl. unnamed gold     1444   43.5   45.8   65.0    6

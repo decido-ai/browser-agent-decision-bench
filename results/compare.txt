@@ -1,0 +1,21 @@
+== decido-1-web-trained.jsonl − jev-1.14.jsonl
+  test_task                 n=  500   79.4 vs  62.4  diff +17.0 [+12.8, +21.2]  only-first 110  only-second 25
+  test_website              n=  500   79.6 vs  59.0  diff +20.6 [+16.2, +25.0]  only-first 125  only-second 22
+  test_domain               n=  500   76.8 vs  58.2  diff +18.6 [+14.4, +23.2]  only-first 121  only-second 28
+  unseen (website+domain)   n= 1000   78.2 vs  58.6  diff +19.6 [+16.4, +22.8]  only-first 246  only-second 50
+  ALL                       n= 1500   78.6 vs  59.9  diff +18.7 [+16.2, +21.3]  only-first 356  only-second 75
+  ALL excl. unnamed gold    n= 1444   79.1 vs  61.5  diff +17.6 [+15.0, +20.2]  only-first 328  only-second 74
+== decido-1-web-trained.jsonl − jev-1.13.jsonl
+  test_task                 n=  500   79.4 vs  55.8  diff +23.6 [+19.2, +28.2]  only-first 141  only-second 23
+  test_website              n=  500   79.6 vs  52.0  diff +27.6 [+22.8, +32.4]  only-first 158  only-second 20
+  test_domain               n=  500   76.8 vs  55.4  diff +21.4 [+16.8, +26.0]  only-first 132  only-second 25
+  unseen (website+domain)   n= 1000   78.2 vs  53.7  diff +24.5 [+21.3, +27.7]  only-first 290  only-second 45
+  ALL                       n= 1500   78.6 vs  54.4  diff +24.2 [+21.7, +26.9]  only-first 431  only-second 68
+  ALL excl. unnamed gold    n= 1444   79.1 vs  55.9  diff +23.2 [+20.5, +25.8]  only-first 403  only-second 68
+== decido-1-web-trained.jsonl − decido-1.jsonl
+  test_task                 n=  500   79.4 vs  42.0  diff +37.4 [+32.8, +41.8]  only-first 196  only-second 9
+  test_website              n=  500   79.6 vs  39.8  diff +39.8 [+35.0, +44.4]  only-first 213  only-second 14
+  test_domain               n=  500   76.8 vs  45.8  diff +31.0 [+26.2, +35.8]  only-first 176  only-second 21
+  unseen (website+domain)   n= 1000   78.2 vs  42.8  diff +35.4 [+31.9, +38.8]  only-first 389  only-second 35
+  ALL                       n= 1500   78.6 vs  42.5  diff +36.1 [+33.2, +38.9]  only-first 585  only-second 44
+  ALL excl. unnamed gold    n= 1444   79.1 vs  43.5  diff +35.6 [+32.8, +38.2]  only-first 557  only-second 43
