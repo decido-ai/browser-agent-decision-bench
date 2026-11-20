@@ -15,7 +15,7 @@ Step accuracy (%): a step counts only if both the operation and the element are 
 
 | decision model | new tasks | new websites | new domains | unseen (web + domain) | **all 1,500** | element | operation |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| **Decido-1 (web-trained, unreleased)** | 79.4 | 79.6 | 76.8 | 78.2 | **78.6** | 80.7 | 94.1 |
+| **[Decido-1 (web-trained)](https://huggingface.co/decido-ai/decido-1-web-26b-a4b)** | 79.4 | 79.6 | 76.8 | 78.2 | **78.6** | 80.7 | 94.1 |
 | Jev 1.14 (TypeSafe API) | 62.4 | 59.0 | 58.2 | 58.6 | **59.9** | 62.3 | 86.8 |
 | Jev 1.13 (TypeSafe API) | 55.8 | 52.0 | 55.4 | 53.7 | **54.4** | 56.9 | 80.0 |
 | Decido-1 (released, no web training) | 42.0 | 39.8 | 45.8 | 42.8 | **42.5** | 44.8 | 65.2 |
@@ -54,8 +54,9 @@ export TYPESAFE_API_KEY=...                # only for TypeSafe's API
 python decision_bench.py run --steps data/steps-final.zip --url https://api.typesafe.ai/v1/systemone \
     --api-key-env TYPESAFE_API_KEY --model jev-1.14.0 --out results/my-jev.jsonl --workers 4
 
-#    e.g. a self-hosted Decido model (Jev-compatible server):
-#    pip install "decido-ai[server]" && DECIDO_N_CTX=32768 decido serve decido-ai/decido-1-26b-a4b --port 8080
+#    e.g. Decido-1 (web-trained), self-hosted on one 80 GB NVIDIA GPU (Jev-compatible server):
+#    pip install "decido-ai[vllm,server]>=1.1.1"
+#    DECIDO_N_CTX=32768 decido serve decido-ai/decido-1-web-26b-a4b --device cuda --engine vllm --port 8080
 python decision_bench.py run --steps data/steps-final.zip --url http://127.0.0.1:8080/v1/systemone --out results/mine.jsonl
 
 # 3) rebuild the step set from Multimodal-Mind2Web (download the test_* parquet files first)
@@ -84,7 +85,7 @@ password because Mind2Web asks that its test data not be posted unzipped (to kee
 - Mind2Web has no wait/scroll/done labels, so those operations are never correct here.
 - Decido-1 (web-trained)'s training data is separate from these test sets: no shared tasks or near-duplicate goals, and
   no websites from the "new websites" and "new domains" sets ("new tasks" uses websites it was trained on, by design).
-  Jev's training data is not public. The web-trained model is not yet released.
+  Jev's training data is not public. The web-trained model is open: https://huggingface.co/decido-ai/decido-1-web-26b-a4b.
 - Results files for Jev contain only the chosen element and operation per step.
 
 ## Files
